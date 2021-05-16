@@ -117,4 +117,15 @@ hello.user = 'Sam'; // valid or invalid
 
 9. What is higher order function explain with an example.
 
+A function that accepts and/or returns another function is called a higher-order function. It's higher-order because instead of strings, numbers, or booleans, it goes higher to operate on functions
+
+
+var items = ["Apple", "Windows", "Linux", "Kindle", "Quiz"]
+var charlength = items.map(function(e){
+    return e.length
+})
+
 10. Explain what is callback function. Why you can pass a function inside a function?
+
+
+ a callback is a function passed into another function as an argument to be executed later. To find all the odd numbers in the array, you can use the filter() method of the Array object. The filter() method creates a new array with the elements that pass the test implemented by a function.
