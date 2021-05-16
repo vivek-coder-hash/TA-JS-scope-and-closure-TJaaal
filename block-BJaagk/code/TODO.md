@@ -128,4 +128,4 @@ var charlength = items.map(function(e){
 10. Explain what is callback function. Why you can pass a function inside a function?
 
 
- a callback is a function passed into another function as an argument to be executed later. To find all the odd numbers in the array, you can use the filter() method of the Array object. The filter() method creates a new array with the elements that pass the test implemented by a function.
+ a callback is a function passed into another function as an argument to be executed later. To find all the odd numbers in the array, you can use the filter() method of the Array object. The filter() method creates a new array with the elements that pass the test implemented by a function..
