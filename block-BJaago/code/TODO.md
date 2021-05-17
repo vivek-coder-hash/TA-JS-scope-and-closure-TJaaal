@@ -49,13 +49,13 @@ sayHi();
 
 ```js
 function sayHi() {
-  console.log(name);
-  console.log(age);
+  console.log(name); //undefined
+  console.log(age);  //undefined
   var name = 'Lydia';
   var age = 21;
 }
 
-sayHi();  //undefined
+sayHi();  
 ```
 
 <!-- Put your image below -->
@@ -65,8 +65,8 @@ sayHi();  //undefined
 4.
 
 ```js
-console.log(arr); // output
-console.log(username); // output
+console.log(arr); // undefined
+console.log(username); // undefined
 var usename = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 
