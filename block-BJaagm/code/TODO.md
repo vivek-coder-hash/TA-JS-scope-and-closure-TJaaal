@@ -17,13 +17,17 @@ Gloval execution context created by Javascript , when javascript engine run the 
 
 5. Execution context consists of what all things?
 
-
+Execution consist of memory and place where all execution will happen .
 
 6. What are the different types of execution context?
 
+Global execution context  and Function execution context .
+
 7. When global and function execution context gets created?
 
+when code run for first time then GEC created  . When you call function then FEC created .
 8. Function execution gets created during function execution or while declaring a function.
+function execution .
 
 
 9. Create a execution context diagram of the following code on your notebook. Take a screenshot/photo and store it in the folder named `img`. Use `![](./img/image-name.png)` to display it here.
@@ -43,6 +47,9 @@ var userMsg = sayHello(user);
 <!-- Put your image here -->
 
 ![](./img/image-name.jpg)
+
+
+
 
 
 
