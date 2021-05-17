@@ -5,7 +5,7 @@ Create a execution context diagram of the following code on your notebook. Take 
 1.
 
 ```js
-var firstName = 'Arya';
+var firstName = 'Arya'; 
 var lastName = 'Stark';
 
 function getFullName(first, last) {
@@ -55,7 +55,7 @@ function sayHi() {
   var age = 21;
 }
 
-sayHi();
+sayHi();  //undefined
 ```
 
 <!-- Put your image below -->
