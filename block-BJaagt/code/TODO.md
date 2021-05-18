@@ -49,7 +49,7 @@ let username = 'John';
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); //John
+console.log(useranme); //username declared
 ```
 
 6. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -59,7 +59,7 @@ let username = 'John';
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // John
 ```
 
 7. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -70,23 +70,27 @@ function sayHello() {
   let username = 'Arya';
 }
 sayHello();
-console.log(useranme); // output
+console.log(useranme); // John
 ```
 
 8. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
 ```js
 for (var i = 0; i < 10; i++) {
-  console.log(i, 'First'); // output
+  console.log(i, 'First'); // 0,"First"  1,"First"   2,"First"  ....   9,"First"  
 }
-console.log(i, 'Second'); // output
+console.log(i, 'Second'); //   10,"Second" 
+
+var create global score therefore i is accessible outside for loop .
 ```
 
 9. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
 ```js
 for (let i = 0; i < 10; i++) {
-  console.log(i, 'First'); 
+  console.log(i, 'First');    //   0,"First"  1,"First"   2,"First"  ....   9,"First"  
 }
-console.log(i, 'Second'); // output
+console.log(i, 'Second'); //  i not defined
+
+let create block scope , therefore i is not accessible outside forloop.
 ```
