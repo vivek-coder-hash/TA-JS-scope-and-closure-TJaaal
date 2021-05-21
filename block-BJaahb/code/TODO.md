@@ -2,7 +2,7 @@ Create the execution context diagram for the following code snippets:
 
 ```js
 function outer() {
-  let b = 10;
+  let b = 10; ;
   function inner() {
     let a = 20;
     console.log(a + b);
