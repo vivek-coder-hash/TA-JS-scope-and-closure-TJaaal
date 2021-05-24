@@ -12,6 +12,9 @@
 ```js
 function loop() {
   // Your code goes here
+  for(let i= number; text(i) ; i = update(i)) {
+    body(i)
+  }
 }
 
 loop(
@@ -30,7 +33,13 @@ loop(
 Here's how it works. The function has an "accumulator value" which starts as the `initialValue` and accumulates the output of each loop. The array is iterated over, passing the accumulator and the next array element as arguments to the `callback`. The callback's return value becomes the new accumulator value. The next loop executes with this new accumulator value. In the example above, the accumulator begins at 0. `add(0,4)` is called. The accumulator's value is now 4. Then `add(4, 1)` to make it 5. Finally `add(5, 3)` brings it to 8, which is returned.
 
 ```js
-function reduce(array, callback, initialValue) {}
+function reduce(array, callback, initialValue) {
+  let num = initialValue;
+  for(let i= 0; i < array.length ; i++) {
+    num += callback(initialValue, array[i]);
+  }
+  return num;
+}
 
 // Test
 var nums = [4, 1, 3];
@@ -58,8 +67,14 @@ console.log(
 4. Construct a function `union` that compares input arrays and returns a new array that contains all elements. If there are duplicate elements, only add it once to the new array. Preserve the order of the elements starting from the first element of the first input array.
 
 ```js
-function union(arrays) {}
-
+function union(...arrays) {
+  return arrays.flat().reduce((a,b)=> {
+    if(!a.includes(b)){
+      a.push(b)
+    }
+    return a
+  },[])
+}
 // Test
 console.log(
   union([5, 10, 15], [15, 88, 1, 5, 7], [100, 15, 10, 1, 5])
