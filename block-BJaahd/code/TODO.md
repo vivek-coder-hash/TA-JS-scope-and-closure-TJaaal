@@ -18,7 +18,7 @@ function getCounter() {
     },
   };
 };
-
+;
 let counter = getCounter()
 
 counter.value();  // output
