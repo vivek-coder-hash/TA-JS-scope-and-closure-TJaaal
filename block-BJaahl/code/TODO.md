@@ -2,7 +2,15 @@
 
 ```js
 function once(cb) {
-  // your code goes here
+ let count = 1;
+  function callback() {
+    if(count <=1) {
+      count +=1
+      return cb()
+
+    }
+  }
+  return callback
 }
 
 // TEST
@@ -19,6 +27,15 @@ log(); // return undefinde (can't be called twice)
 ```js
 function once(cb) {
   // your code goes here
+   let count = 1;
+  function callback() {
+    if(count <=1) {
+      count +=1
+      return cb(msg)
+
+    }
+  }
+  return callback
 }
 
 // TEST
@@ -36,6 +53,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest
 ```js
 function once(cb) {
   // your code goes here
+  let count = 1;
+  function callback() {
+    if(count <=1) {
+      count +=1
+      return cb(msg.join(" "))
+    }
+  }
+  return callback
 }
 
 // TEST
@@ -49,6 +74,14 @@ log(); // return undefinde (can't be called twice)
 ```js
 function nTimes(cb, times, ...rest) {
   // your code goes here
+  let count = 1;
+  function callback() {
+    if(count <=times ) {
+      count +=1
+      return cb(rest.join(" "))
+    }
+  }
+  return callback
 }
 
 // TEST
