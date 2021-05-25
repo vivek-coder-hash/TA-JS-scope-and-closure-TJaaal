@@ -7,6 +7,10 @@ The returned function accepts a sentence. If the sentence contains the `fromWord
 ```js
 function censor(fromWord, toWord) {
   //  Your code goes here
+  function cb(str) {
+    return str.replace(fromWord, toWord);
+  }
+  return cb;
 }
 
 let censorSentence = censor('World', 'Sam');
@@ -26,6 +30,20 @@ The returned function either accepts two parameter or one parameter.
 ```js
 function multipleCensor() {
   //  Your code goes here
+  const array = [];
+  function cb(a, b) {
+    if (a && b) {
+      array.push([a, b]);
+      console.log(array);
+      return;
+    } else {
+      for (let arr of array) {
+        a.replace(arr[0], arr[1]);
+      }
+      return a;
+    }
+  }
+  return cb;
 }
 
 let censorQuote = multipleCensor();
@@ -51,6 +69,16 @@ The returned function accepts one parameter.
 ```js
 function createCache() {
   // Your code goes here
+  let obj = {};
+  function add(num) {
+    if (str !== num) {
+      obj[num] = cb(num);
+      return cb(num);
+    } else {
+      return obj;
+    }
+  }
+  return add;
 }
 
 function add10(num) {
@@ -71,6 +99,20 @@ addCache('foo'); // {12: 22, 100: 110, 1: 11}
 ```js
 function createCache() {
   // Your code goes here
+  let obj = {};
+  function add(num) {
+    if (str !== 'number') {
+      if (obj[num]) {
+        return obj[num];
+      } else {
+        obj[num] = cb(num);
+        return cb(num);
+      }
+    } else {
+      return obj;
+    }
+  }
+  return add;
 }
 
 function add10(num) {
